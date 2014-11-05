@@ -1,0 +1,110 @@
+<legend><h2><i class="fa fa-link"></i> Linkus <small>Modul</small></h2></legend>
+<div class="row">
+<div class="col-md-6">
+<form action="admin.php?linkus" enctype="multipart/form-data" method="POST" name="form" class="form-horizontal" role="form">
+<input type="hidden" name="sid" value="{sid}">
+<div class="panel panel-default">
+  <div class="panel-body bg-warning">
+<legend><h4>Linkus hinzuf&uuml;gen / bearbeiten</h4></legend>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Position</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" name="pos" value="{pos}">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Ersteller</label>
+    <div class="col-sm-10">
+      <input class="form-control" type="text" name="ersteller" value="{ersteller}">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Link</label>
+    <div class="col-sm-10 form-inline">
+      <select class="form-control" onChange="sichtbarA()" name="link">{link}<option value="neu">neue URL</option></select>&nbsp;&nbsp;<input class="form-control" type="text" name="newlink">
+    </div>
+  </div>
+
+  <div class="form-group ">
+    <label class="col-sm-2 control-label">Gr&ouml;&szlig;e</label>
+    <div class="col-sm-10 form-inline">
+      <select class="form-control" onChange="sichtbarB()" name="groesse">{groesse}<option value="neu">neue Gr&ouml;&szlig;e</option></select>&nbsp;&nbsp;<input class="form-control" type="text" name="newgroesse">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Bild</label>
+    <div class="col-sm-10 form-inline">
+      <input class="form-control" type="text" name="url" id="url" value="{url}">&nbsp;Link oder&nbsp;<input class="btn btn-primary" type="file" name="bild" id="bild"  title="Bild suchen" value="{bild}">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label"></label>
+    <div class="col-sm-10">
+      <input class="btn btn-primary" type="submit" value="{sub}" name="sub">
+    </div>
+  </div>
+
+</div></div>
+</form>
+</div>
+
+<div class="col-md-6">
+<span class="visible-xs-800"><br><legend><h4>eingetragene Banner</h4></legend></span>
+<div class="row">
+{EXPLODE} 
+  <div class="col-md-6">
+    <div class="thumbnail">
+      <img src="{bild}" alt="Image not found">
+      <div class="caption text-center">
+        <p><small><span class="badge">{pos}</span> {groesse}</small></p>
+<div class="btn-group">
+<a class="btn btn-default" href="" rel="tooltip" title="erstellt von {ersteller}"><i class="fa fa-user"></i></a><a class="btn btn-default" href="?linkus&sid={id}" rel="tooltip" title="&auml;ndern"><i class="fa fa-pencil-square-o"></i></a><a class="btn btn-default" href="javascript:del('{id}')" rel="tooltip" title="l&ouml;schen"><i class="fa fa-times"></i></a>
+</div>
+
+      </div>
+    </div>
+</div>
+ {EXPLODE}
+
+  </div>
+</div>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function del (id1) {
+	var x = confirm ( "Wirklich entfernen?" );
+	if (x) {
+		document.location.href="admin.php?linkus&delete=" + id1;
+	}
+}
+function sichtbarA() {
+	if( document.form.link.value == "neu") {
+		document.form.newlink.style.visibility = "visible";
+	} else {
+		document.form.newlink.style.visibility = "hidden";
+	}
+}
+function sichtbarB() {
+	if( document.form.groesse.value == "neu") {
+		document.form.newgroesse.style.visibility = "visible";
+	} else {
+		document.form.newgroesse.style.visibility = "hidden";
+	}
+}
+sichtbarA();
+sichtbarB();
+//-->
+</script>
+
+<script>
+$('input[type=file]').bootstrapFileInput();
+$('.file-inputs').bootstrapFileInput();
+</script>
+
+

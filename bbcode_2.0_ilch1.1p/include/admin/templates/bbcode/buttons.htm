@@ -1,0 +1,205 @@
+<legend><h2><i class="fa fa-th-large"></i> BBCode 2.0  <small>Buttons</small></h2></legend>
+
+			<form action="admin.php?bbcode-buttons" method="POST" name="form" class="form-horizontal" role="form">
+{Message}
+<div class="panel panel-warning">
+ <div class="panel-heading">Zeichenformatierung</div>
+  <div class="panel-body">
+<div class="row">
+<div class="col-md-6">
+
+
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Text Fett formatieren!">[b] erlauben?</span></label>
+                <div class="col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_B_On}"><input name="BBCode_B" value="1" type="radio">ja</label><label class="btn btn-default {Selected_B_Off}"><input name="BBCode_B" value="0" type="radio"> nein</label></div>
+            </div>
+</div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Text Kursiv formatieren!">[i] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_I_On}"><input name="BBCode_I" value="1" type="radio">ja</label><label class="btn btn-default {Selected_I_Off}"><input name="BBCode_I" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Text unterstrichen formatieren!">[u] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_U_On}"><input name="BBCode_U" value="1" type="radio">ja</label><label class="btn btn-default {Selected_U_Off}"><input name="BBCode_U" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Text durchgestrichen formatieren!">[s] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_S_On}"><input name="BBCode_S" value="1" type="radio">ja</label><label class="btn btn-default {Selected_S_Off}"><input name="BBCode_S" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Text hervorheben!">[emph] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_EMPH_On}"><input name="BBCode_EMPH" value="1" type="radio">ja</label><label class="btn btn-default {Selected_EMPH_Off}"><input name="BBCode_EMPH" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+</div><div class="col-md-6">
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Schriftfarbe formatieren!">[color] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_COLOR_On}"><input name="BBCode_COLOR" value="1" type="radio">ja</label><label class="btn btn-default {Selected_COLOR_Off}"><input name="BBCode_COLOR" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Schriftgr&ouml;&szlig;e formatieren!">[size] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_SIZE_On}"><input name="BBCode_SIZE" value="1" type="radio">ja</label><label class="btn btn-default {Selected_SIZE_Off}"><input name="BBCode_SIZE" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="E-Mail!">[mail] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_MAIL_On}"><input name="BBCode_MAIL" value="1" type="radio">ja</label><label class="btn btn-default {Selected_MAIL_Off}"><input name="BBCode_MAIL" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Hyperlinks!">[url] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_URL_On}"><input name="BBCode_URL" value="1" type="radio">ja</label><label class="btn btn-default {Selected_URL_Off}"><input name="BBCode_URL" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;">URL Auto. umwandeln?</label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_AUTO_URL_On}"><input name="BBCode_AUTO_URL" value="1" type="radio">ja</label><label class="btn btn-default {Selected_AUTO_URL_Off}"><input name="BBCode_AUTO_URL" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+</div></div>
+</div></div>
+<div class="panel panel-warning">
+ <div class="panel-heading">Absatzformatierung</div>
+  <div class="panel-body">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Text links ausrichten!">[left] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_LEFT_On}"><input name="BBCode_LEFT" value="1" type="radio">ja</label><label class="btn btn-default {Selected_LEFT_Off}"><input name="BBCode_LEFT" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Text mittig ausrichten!">[center] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_CENTER_On}"><input name="BBCode_CENTER" value="1" type="radio">ja</label><label class="btn btn-default {Selected_CENTER_Off}"><input name="BBCode_CENTER" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Text rechts ausrichten!">[right] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_RIGHT_On}"><input name="BBCode_RIGHT" value="1" type="radio">ja</label><label class="btn btn-default {Selected_RIGHT_Off}"><input name="BBCode_RIGHT" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Text als Block ausrichten!">[block] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_BLOCK_On}"><input name="BBCode_BLOCK" value="1" type="radio">ja</label><label class="btn btn-default {Selected_BLOCK_Off}"><input name="BBCode_BLOCK" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+</div></div>
+</div></div>
+
+<div class="panel panel-warning">
+ <div class="panel-heading">Sonderformatierung</div>
+  <div class="panel-body">
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;">Smilies erlauben?</label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_SMILIES_On}"><input name="BBCode_SMILIES" value="1" type="radio">ja</label><label class="btn btn-default {Selected_SMILIES_Off}"><input name="BBCode_SMILIES" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Aufzählung!">[list] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_LIST_On}"><input name="BBCode_LIST" value="1" type="radio">ja</label><label class="btn btn-default {Selected_LIST_Off}"><input name="BBCode_LIST" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Klapptext!">[ktext] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_KTEXT_On}"><input name="BBCode_KTEXT" value="1" type="radio">ja</label><label class="btn btn-default {Selected_KTEXT_Off}"><input name="BBCode_KTEXT" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Grafik!">[img] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_IMG_On}"><input name="BBCode_IMG" value="1" type="radio">ja</label><label class="btn btn-default {Selected_IMG_Off}"><input name="BBCode_IMG" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Bild in Usergallery hochladen und einf&uuml;gen erlauben!">Bildupload erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_IMGUPL_On}"><input name="BBCode_IMGUPL" value="1" type="radio">ja</label><label class="btn btn-default {Selected_IMGUPL_Off}"><input name="BBCode_IMGUPL" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="verkleinerte Grafik!">[screenshot] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_SCREEN_On}"><input name="BBCode_SCREEN" value="1" type="radio">ja</label><label class="btn btn-default {Selected_SCREEN_Off}"><input name="BBCode_SCREEN" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Videos von YouTube,Google und MyVideo!">[video] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_VIDEO_On}"><input name="BBCode_VIDEO" value="1" type="radio">ja</label><label class="btn btn-default {Selected_VIDEO_Off}"><input name="BBCode_VIDEO" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Countdown bis zum Datum [Tage, Stunden, Minuten und Sekunden]">[countdown] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_COUNTDOWN_On}"><input name="BBCode_COUNTDOWN" value="1" type="radio">ja</label><label class="btn btn-default {Selected_COUNTDOWN_Off}"><input name="BBCode_COUNTDOWN" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="PHP Code Highlight!">[php] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_PHP_On}"><input name="BBCode_PHP" value="1" type="radio">ja</label><label class="btn btn-default {Selected_PHP_Off}"><input name="BBCode_PHP" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="CSS Code Highlight!">[css] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_CSS_On}"><input name="BBCode_CSS" value="1" type="radio">ja</label><label class="btn btn-default {Selected_CSS_Off}"><input name="BBCode_CSS" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Html Code Highlight!">[html] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_HTML_On}"><input name="BBCode_HTML" value="1" type="radio">ja</label><label class="btn btn-default {Selected_HTML_Off}"><input name="BBCode_HTML" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Code Box!">[code] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_CODE_On}"><input name="BBCode_CODE" value="1" type="radio">ja</label><label class="btn btn-default {Selected_CODE_Off}"><input name="BBCode_CODE" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Kommentare!">[quote] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_QUOTE_On}"><input name="BBCode_QUOTE" value="1" type="radio">ja</label><label class="btn btn-default {Selected_QUOTE_Off}"><input name="BBCode_QUOTE" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+<div class="form-group">
+                <label class="control-form col-sm-5 text-right" style="line-height: 34px;"><span rel="tooltip" title="Flash!">[flash] erlauben?</span></label>
+                <div class=" col-sm-5">
+                    <div class="btn-group" data-toggle="buttons"><label class="btn btn-default {Selected_FLASH_On}"><input name="BBCode_FLASH" value="1" type="radio">ja</label><label class="btn btn-default {Selected_FLASH_Off}"><input name="BBCode_FLASH" value="0" type="radio"> nein</label></div>
+                </div>
+            </div>
+</div></div>
+</div></div>
+<div class="row text-center">
+<input class="btn btn-primary" type="submit" value="Zust&auml;nde Speichern" name="BB_SubmitButtons"><br><br>
+</div>
+</form>

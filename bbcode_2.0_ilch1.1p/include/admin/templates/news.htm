@@ -1,0 +1,111 @@
+<script language="JavaScript" type="text/javascript"><!--
+function delcheck ( DELID ) {
+	var frage = confirm ( "Willst du diesen Eintrag wirklich l&ouml;schen?" );
+	if ( frage == true ) {
+	  document.location.href="?news-del-"+DELID;
+	}
+}
+
+function delKcheck ( DELID , NID) {
+	var frage = confirm ( "Willst du dieses Kommentar wirklich l&ouml;schen?" );
+	if ( frage == true ) {
+	  document.location.href="?news-sKoms-"+NID+"-Kdel-"+DELID+"#"+NID;
+	}
+}
+
+function sichtbar(){
+	if( document.form.katLis.value=="neu"){
+	  document.form.kat.style.visibility="visible";
+	} else {
+	  document.form.kat.style.visibility="hidden";
+  }
+}
+//--></script>
+
+<script type="text/javascript" src="include/includes/js/bbcode.js"></script> 
+<script type="text/javascript" src="include/includes/js/interface.js"></script>
+
+<legend><h2><i class="fa fa-file-text-o"></i> News</h2></legend>
+<div class="row">
+  <div class="col-md-6">
+
+<form method="POST" name="form" action="?news" role="form">
+  <input type="hidden" name="um"     value="{AKTION}">
+  <input type="hidden" name="newsID" value="{NEWSID}">
+  <div class="form-group">
+    <label>Titel</label>
+    <input class="form-control" type="text" name="titel" value="{UEBER}">
+  </div>
+<div class="panel panel-default" style="background-color:#EFEFEF;">
+  <div class="panel-body">
+  <div class="form-group">
+    <label>News Text</label>
+<table width="100%">
+<tr>
+<td colspan="2">
+      
+      <!-- BB Code START -->
+{__BBCodeButtons__}
+      <!-- BB Code ENDE -->
+      </td>
+</tr><tr>
+      <td width="20%" class="visible-xsmin">{SMILIS}</td>
+      <td ><textarea name="txt" class="form-control" rows="15" tabindex="2">{txt}</textarea></td>
+    </tr></table>
+</div>
+</div></div>
+  <div class="form-group">
+    <label>Sichtbar ab</label>
+    <select class="form-control" name="grecht">{_list_grecht@<option%1 value="%2">%3</option>}</select>
+  </div>
+  <div class="form-group">
+    <label>Kategorie</label>
+    <select class="form-control" onChange="sichtbar()" name="katLis">{KATS}<option value="neu">Neu:</option></select>&nbsp;<input class="form-control" type="text" name="kat" size="40">
+  </div>
+  <div class="form-group">
+    <label></label>
+    <input class="btn btn-primary" type="submit" value="{FSUB}" name="submit">
+  </div>
+
+</form>
+
+<div class="alert alert-warning" role="alert">
+			<h4>Merke (Kategorie Bild)</h4>
+			Das Kategorie Bild muss in den Ordner include/images/news/
+			<br />
+			Das Bild muss genau wie die Kategorie heissen z.B. wenn die Kategorie
+			Allgemein heisst dann muss das Bild Allgemein heissen;)...
+			<br />
+			Die Endung muss entweder .jpg oder .gif sein bei uns also z.B. Allgemein.jpg
+</div>
+
+<div class="alert alert-warning" role="alert">
+				<h4>Merke (Vorschau Funktion)</h4>
+				Soll nur ein kleinerer Vorschautext angezeigt werden, einfach erst die Vorschau
+				eingeben und nach der Vorschau dann <strong>[PREVIEWENDE]</strong> schreiben. Dann den langen
+				Text eintragen.
+</div>
+
+
+{MPL}
+</div>
+  <div class="col-md-6">
+<span class="visible-xs-800"><legend>Eintr&auml;ge verwalten</legend></span>
+<div class="panel panel-default">
+  <div class="panel-body">
+<table class="table  table-striped">
+  {EXPLODE}<tr>
+	  <td><a style="margin-right:5px;" href="#" name="{ID}"></a><a href="javascript:delcheck({ID})" rel="tooltip" title="l&ouml;schen"><i style="color:#AD0000;" class="fa fa-trash-o"></i></a>
+<a href="?news-edit-{ID}" rel="tooltip" title="&auml;ndern"><i style="color:#2D9600;" class="fa fa-pencil-square-o"></i></a></td>
+		<td>{TITEL}</td>
+ </tr>{EXPLODE}
+</table></div></div>
+{MPL}
+
+
+</div></div>
+<script language="JavaScript" type="text/javascript">
+<!--
+  sichtbar();
+//-->
+</script>

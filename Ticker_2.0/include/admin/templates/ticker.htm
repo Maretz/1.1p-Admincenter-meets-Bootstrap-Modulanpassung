@@ -1,0 +1,110 @@
+<script language="JavaScript" type="text/javascript">
+<!--
+  function delcheck ( DID ) {
+    var frage = confirm ( "Willst du dieses Feld und die Werte der User wirklich unwiederbringlich löschen?" );
+    if ( frage ) {
+      document.location.href="?ticker-delete-"+DID;
+    }
+  }
+function shouldset(passon){
+if(document.colorpicker.color.value.length == 7){setcolor(passon)}
+}
+
+function setcolor(elem){
+document.colorpicker.color.value=elem
+     document.colorpicker.selcolor.style.backgroundColor=elem
+}
+//-->
+</script>
+<legend><h2>Ticker 2.0 <small>Modul</small></h2></legend>
+<form name="colorpicker" action="admin.php?ticker" method="POST" class="form-horizontal" role="form">
+  <input type="hidden" name="sid" value="{sid}">
+
+<div class="panel panel-default">
+  <div class="panel-body">
+<legend>neuen Ticker erstellen</legend>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label">Titel</label>
+    <div class="col-sm-6">
+      <input class="form-control" type="text" name="title" value="{title}">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Text</label>
+    <div class="col-sm-6">
+      <textarea class="form-control" rows="6" name="text">{text}</textarea>
+    </div>
+  </div>
+<div class="form-group form-inline">
+    <label class="col-sm-2 control-label">Text-Farbe</label>
+    <div class="col-sm-6">
+      {colorpicker}<br><input class="form-control" type="text" name="color" value="{color}" onChange="shouldset(this.value)"><img border="0" src="include/images/icons/pix.gif" width="20" height="20" alt=""><input class="form-control" type="text" name="selcolor" size="13" onFocus="this.blur()">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Text-Gr&ouml;&szlig;e</label>
+    <div class="col-sm-6">
+      <input class="form-control" type="text" name="size" value="{size}">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Text-Geschwindigkeit</label>
+    <div class="col-sm-6">
+      <select class="form-control" name="speed">{speed}</select>
+    <span class="help-block">von 1 = langsam bis 10 = schnell</span>
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Text-Laufrichtung</label>
+    <div class="col-sm-6">
+      <select class="form-control" name="direction">{direction}</select>
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Box Breite</label>
+    <div class="col-sm-6">
+      <input class="form-control" type="text" name="width" value="{width}">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Box H&ouml;he</label>
+    <div class="col-sm-6">
+      <input class="form-control" type="text" name="height" value="{height}">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label"></label>
+    <div class="col-sm-6">
+<input class="btn btn-primary" type="submit" value="{sub}" name="sub">
+    </div>
+  </div>
+</div></div>
+</form>
+
+<table class="table table-bordered table-condensed">
+  <tr class="active">
+		<th colspan="3">Ticker verwalten</th>
+	</tr>
+{EXPLODE}
+</table>
+</td></tr>
+<tr>
+<td colspan="3"><br>
+</td></tr>
+<tr>
+<td colspan="3">
+<table class="table table-bordered table-condensed">
+  <tr class="active">
+
+		<th>Ticker Vorschau</th>
+	</tr>
+	<tr>
+    <td>
+    {EXPLODE}
+  </td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
