@@ -202,11 +202,11 @@ function new_kat(){
 <div class="panel panel-default">
 <div class="panel-heading">News Liste</div>
 <div class="panel-body">
-<table class="table table-striped">
+<table class="table table-striped table-hover">
 <tr class="success"><td colspan="3" class="text-right"><a class="btn btn-primary btn-sm" href="admin.php?news">Neue News erstellen</a></td></tr>
   {EXPLODE}<tr>
 	  <td><a href="javascript:void(0);" onclick="xajax_vorschau_id({ID});"><i rel="tooltip" title="{title}" style="color:#3faa22;" class="fa fa-info-circle"></i> {TITEL}</a></td>
-      <td class="text-right"><a style="margin-right:5px;" href="javascript:void(0);" onclick="delcheck({ID})" rel="tooltip" title="News l&ouml;schen"><i style="color:#AD0000;"class="fa fa-times"></i> 
+      <td class="text-right" nowrap><a style="margin-right:5px;" href="javascript:void(0);" onclick="delcheck({ID})" rel="tooltip" title="News l&ouml;schen"><i style="color:#AD0000;"class="fa fa-times"></i> 
 <a style="margin-right:5px;" href="?news-edit-{ID}" rel="tooltip" title="News &auml;ndern"><i style="color:#2D9600;" class="fa fa-pencil-square-o"></i></a>
 <a style="margin-right:5px;" href="?news-s{ID}" rel="tooltip" title="{sperren}">{sperre}</a>
 <a href="?news-t{ID}">{topnews}</a></td>
