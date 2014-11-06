@@ -10,6 +10,7 @@ Auflistung der Module mit Original Download-Link
 - BBcode 2.0 1.1p > http://www.ilch.de/downloads-show-1742.html
 - Ticker 2.0 > http://www.ilch.de/downloads-show-1082.html
 - LinkUs 1.1p > http://www.ilch.de/downloads-show-1043.html
+- News extended 1.4c > http://mairu.ilch.de/index.php?downloads-show-36
 
 
 Fragen, sowie Modulvorschläge können gerne an Maretz.eu unterbreitet werden.
