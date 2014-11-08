@@ -1,0 +1,50 @@
+{EXPLODE}
+<a class="btn btn-primary btn-sm" href="?yt_gallery" rel="tooltip" title="zur Startseite des Moduls">Startseite</a>
+<legend><h2><i class="fa fa-youtube-square"></i> YouTube Gallery <small>v.1.1</small></h2></legend>
+<script type='text/javascript' src='include/includes/js/bbcode.js'></script>
+
+<form action="?yt_gallery&do=doedit" method="post" enctype="multipart/form-data" name="form" class="form-horizontal" role="form">
+<div class="panel panel-warning">
+  <div class="panel-heading"><img style="max-height:50px;" src="http://i1.ytimg.com/vi/{YTID}/default.jpg"> Video Bearbeiten</div>
+  <div class="panel-body">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">VideoID</label>
+    <div class="col-sm-4">
+<input name="ytid" class="form-control" type="text" id="ytid" value="{YTID}">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Titel</label>
+    <div class="col-sm-6">
+<input name="titel" class="form-control" type="text" id="ytid" value="{TITEL}">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Video Nr.</label>
+    <div class="col-sm-4">
+<input name="sort" class="form-control" type="text" id="sort" value="{SORT}">
+    </div>
+  </div>
+
+<div class="form-group">
+    <label class="col-sm-2 control-label" rel="tooltip" title="Beschreibung">Text</label>
+    <div class="col-sm-10">
+			    <a href="javascript:simple('b')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.bold.gif" alt="b" title="Fett" border="0" /></a>
+				    <a href="javascript:simple('i')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.italic.gif" alt="i" title="Kursiv" border="0" /></a>
+				    <a href="javascript:simple('u')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.underline.gif" alt="u" title="unterstrichen" border="0" /></a>
+				    <a href="javascript:simple('code')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.code.gif" alt="Code" title="Code" border="0" /></a>
+				    <a href="javascript:simple_liste()"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.insertunorderedlist.gif" alt="Liste" title="Liste" border="0" /></a>
+				    <a href="javascript:simple('url')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.link.gif" alt="Url" title="Link" border="0" /></a>
+				    <a href="javascript:simple('img')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.image.gif" alt="Bild" title="Bild" border="0" /></a>
+<br>
+<textarea class="form-control" name="txt" id="txt" rows="10" tabindex="2">{TEXT}</textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label"></label>
+    <div class="col-sm-10">
+<input class="btn btn-primary" type="submit" name="edit" value="Eintrag &Auml;ndern">
+</div></div>
+<input type="hidden" name="id" id="id" value="{ID}">
+</form>
+</div></div>{EXPLODE}

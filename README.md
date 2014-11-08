@@ -11,6 +11,7 @@ Auflistung der Module mit Original Download-Link
 - Ticker 2.0 > http://www.ilch.de/downloads-show-1082.html
 - LinkUs 1.1p > http://www.ilch.de/downloads-show-1043.html
 - News extended 1.4c > http://mairu.ilch.de/index.php?downloads-show-36
+- YouTube Gallery v. 1.1 > http://www.ilch.de/downloads-show-1697.html#prettyPhoto
 
 
 Fragen, sowie Modulvorschläge können gerne an Maretz.eu unterbreitet werden.

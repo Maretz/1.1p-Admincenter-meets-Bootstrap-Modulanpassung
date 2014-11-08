@@ -1,0 +1,72 @@
+<legend><h2><i class="fa fa-youtube-square"></i> YouTube Gallery <small>v.1.1</small></h2></legend>
+<div class="row">
+<div class="col-md-6">
+<script type='text/javascript' src='include/includes/js/bbcode.js'></script>
+<form action="?yt_gallery" method="post" enctype="multipart/form-data" name="form" class="form-horizontal" role="form">
+<div class="panel panel-warning">
+  <div class="panel-heading">Videos hinzuf&uuml;gen</div>
+  <div class="panel-body">
+
+  <div class="form-group form-inline">
+    <label class="col-sm-2 control-label">VideoID</label>
+    <div class="col-sm-10">
+      <input class="form-control" name="ytid" type="text" id="ytid"  placeholder="ID des Videos"> <a href="#" tabindex="0" class="btn btn-lg btn-sm btn-info bs-docs-popover" role="button" data-toggle="popover" data-trigger="focus" title="Video ID" data-content="Die ID des Videos findest du am Ende der URL, hinter dem Zeichen = "><i class="fa fa-question-circle"></i></a>
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label">Titel</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" name="titel" id="titel" placeholder="Titel des Videos">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label" rel="tooltip" title="Sortierungs Nummer">S-Nr.</label>
+    <div class="col-sm-4">
+      <input type="text" class="form-control" name="sort" id="sort">
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label" rel="tooltip" title="Beschreibung">Text</label>
+    <div class="col-sm-10">
+			    <a href="javascript:simple('b')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.bold.gif" alt="b" title="Fett" border="0" /></a>
+				    <a href="javascript:simple('i')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.italic.gif" alt="i" title="Kursiv" border="0" /></a>
+				    <a href="javascript:simple('u')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.underline.gif" alt="u" title="unterstrichen" border="0" /></a>
+				    <a href="javascript:simple('code')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.code.gif" alt="Code" title="Code" border="0" /></a>
+				    <a href="javascript:simple_liste()"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.insertunorderedlist.gif" alt="Liste" title="Liste" border="0" /></a>
+				    <a href="javascript:simple('url')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.link.gif" alt="Url" title="Link" border="0" /></a>
+				    <a href="javascript:simple('img')"><img style="padding-left: 4%; float: left;" src="include/images/icons/button.image.gif" alt="Bild" title="Bild" border="0" /></a>
+<br>
+<textarea class="form-control" name="txt" rows="10" tabindex="2"></textarea>
+    </div>
+  </div>
+<div class="form-group">
+    <label class="col-sm-2 control-label"></label>
+    <div class="col-sm-10">
+      <input class="btn btn-primary" type="submit" name="add" value="Video Eintragen">
+    </div>
+  </div>
+</form>
+</div></div></div>	
+
+<div class="col-md-6">
+<span class="visible-xs-800">
+<legend>eingetragene Videos</legend><br>
+</span>
+<div class="row">
+{EXPLODE}
+  <div class="col-sm-6">
+    <div class="thumbnail text-center">
+      <a href="/?yt_gallery&do=show&id={ID}&v={YTID}" target="_blank"><img src="http://i1.ytimg.com/vi/{YTID}/default.jpg" alt="Image not found"></a>
+      <div class="caption">
+        <h4>{TITEL}</h4>
+        <p class="text-center"><a href="#" class="btn btn-warning" role="button" rel="tooltip" title="Sortierungs Nummer">Nr. {SORT}</a> <a href="?yt_gallery&do=doedit&id={ID}" class="btn btn-primary" role="button" rel="tooltip" title="Bearbeiten"><i class="fa fa-pencil-square-o"></i></a> <a href="?yt_gallery&do=del&id={ID}" onClick="return confirm('Wirklich löschen ?');" rel="tooltip" title="Eintrag L&ouml;schen" class="btn btn-danger" role="button"><i class="fa fa-times"></i></a></p>
+      </div>
+    </div>
+</div>
+
+{EXPLODE}
+</div>
+{MPL}
+</div></div>
+
+
